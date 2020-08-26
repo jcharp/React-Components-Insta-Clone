@@ -5,16 +5,17 @@ import './Comments.css';
 const Comments = props => {
   // 🔥 Make sure the parent of Comments is passing the right props!
   const { comments } = props;
-    //  console.log(props.post);
-     
+    console.log(props);
+     console.log(comments);
      
   return (
+    
     <div>
       {/* map through the comments prop and render a Comment for every piece of data */}
+    {
+    comments.map((item) =>   <Comment key={item.id} comment={item}/>
+    )}
     
-    {/* {comments.map((item) => (
-      <Comment key= {item.id} comment={item}/>
-    ))} */}
     </div>
   );
 };
